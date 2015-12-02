@@ -1,0 +1,182 @@
+[
+    {
+        "outputFile": "E:\\AndroidStudioProjects\\FragmentApp\\android-XListView-library\\build\\intermediates\\res\\merged\\androidTest\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 62,
+                    "endOffset": 113
+                },
+                "from": {
+                    "file": "E:\\AndroidStudioProjects\\FragmentApp\\android-XListView-library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 62,
+                        "endOffset": 113
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 118,
+                    "endColumn": 61,
+                    "endOffset": 175
+                },
+                "from": {
+                    "file": "E:\\AndroidStudioProjects\\FragmentApp\\android-XListView-library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 118,
+                        "endColumn": 61,
+                        "endOffset": 175
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 180,
+                    "endColumn": 62,
+                    "endOffset": 238
+                },
+                "from": {
+                    "file": "E:\\AndroidStudioProjects\\FragmentApp\\android-XListView-library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 180,
+                        "endColumn": 62,
+                        "endOffset": 238
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 243,
+                    "endColumn": 65,
+                    "endOffset": 304
+                },
+                "from": {
+                    "file": "E:\\AndroidStudioProjects\\FragmentApp\\android-XListView-library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 243,
+                        "endColumn": 65,
+                        "endOffset": 304
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 309,
+                    "endColumn": 61,
+                    "endOffset": 366
+                },
+                "from": {
+                    "file": "E:\\AndroidStudioProjects\\FragmentApp\\android-XListView-library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 309,
+                        "endColumn": 61,
+                        "endOffset": 366
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 371,
+                    "endColumn": 62,
+                    "endOffset": 429
+                },
+                "from": {
+                    "file": "E:\\AndroidStudioProjects\\FragmentApp\\android-XListView-library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 371,
+                        "endColumn": 62,
+                        "endOffset": 429
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 434,
+                    "endColumn": 62,
+                    "endOffset": 492
+                },
+                "from": {
+                    "file": "E:\\AndroidStudioProjects\\FragmentApp\\android-XListView-library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 434,
+                        "endColumn": 62,
+                        "endOffset": 492
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 497,
+                    "endLine": 15,
+                    "endColumn": 12,
+                    "endOffset": 783
+                },
+                "from": {
+                    "file": "E:\\AndroidStudioProjects\\FragmentApp\\android-XListView-library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 497,
+                        "endLine": 15,
+                        "endColumn": 12,
+                        "endOffset": 783
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 788,
+                    "endLine": 18,
+                    "endColumn": 12,
+                    "endOffset": 943
+                },
+                "from": {
+                    "file": "E:\\AndroidStudioProjects\\FragmentApp\\android-XListView-library\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 788,
+                        "endLine": 18,
+                        "endColumn": 12,
+                        "endOffset": 943
+                    }
+                }
+            }
+        ]
+    }
+]

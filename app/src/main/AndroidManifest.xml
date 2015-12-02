@@ -10,9 +10,11 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
 
-   <!-- <instrumentation
+    <!--
+        <instrumentation
         android:name="android.test.InstrumentationTestRunner"
-        android:targetPackage="com.scxh.android1503" />-->
+        android:targetPackage="com.scxh.android1503" />
+    -->
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -29,7 +31,8 @@
         android:label="@string/app_name"
         android:theme="@style/AppBaseTheme"
         tools:replace="android:icon, android:theme">
-       <!-- <uses-library android:name="android.test.runner" />-->
+
+        <!-- <uses-library android:name="android.test.runner" /> -->
 
         <activity
             android:name=".MainActivity"
@@ -234,7 +237,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".fragment.life.LifeMainActivity"></activity>
+        <activity android:name=".fragment.life.LifeMainActivity" />
+        <activity android:name=".fragment.parmeter.ArgmentsMainActivity"></activity>
     </application>
 
 </manifest>

@@ -240,7 +240,8 @@
 
         <activity android:name=".fragment.life.LifeMainActivity" />
         <activity android:name=".fragment.parmeter.ArgmentsMainActivity" />
-        <activity android:name=".fragment.parmeter.ParamentFramgentToActivity"></activity>
+        <activity android:name=".fragment.parmeter.ParamentFramgentToActivity" />
+        <activity android:name=".fragment.stack.StackMainActivity"></activity>
     </application>
 
 </manifest>

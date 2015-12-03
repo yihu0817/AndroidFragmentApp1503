@@ -1,6 +1,7 @@
 package com.scxh.android1503.fragment;
 
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -11,7 +12,6 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.scxh.android1503.R;
 
@@ -21,7 +21,22 @@ import com.scxh.android1503.R;
 public class HeadlinesFragment extends Fragment implements AdapterView.OnItemClickListener{
     private String[] arrays = {"新闻","娱乐","科技"};
     private ListView mListView;
-
+    private OnHeadlineSelectedListener mOnHeadlineSelectedListener;
+    /**
+     * 定义接口
+     */
+    public interface OnHeadlineSelectedListener{
+        public void onArticleSelected(String msg);
+    }
+    @Override
+    public void onAttach(Activity context) {
+        super.onAttach(context);
+        if(context instanceof OnHeadlineSelectedListener){
+            mOnHeadlineSelectedListener = (OnHeadlineSelectedListener)context;
+        }else{
+            throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");
+        }
+    }
     public static Fragment newInstance(){
         HeadlinesFragment headlinesFragment = new HeadlinesFragment();
         return headlinesFragment;
@@ -42,7 +57,10 @@ public class HeadlinesFragment extends Fragment implements AdapterView.OnItemCli
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         HeadlineAdapter adapter = (HeadlineAdapter) parent.getAdapter();
         String item = (String) adapter.getItem(position);
-        Toast.makeText(getActivity(), item, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(getActivity(), item, Toast.LENGTH_SHORT).show();
+        if(mOnHeadlineSelectedListener != null) {
+            mOnHeadlineSelectedListener.onArticleSelected(item);
+        }
     }
 
 

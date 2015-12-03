@@ -16,6 +16,7 @@ import com.scxh.android1503.event.SaveStateActivity;
 import com.scxh.android1503.fragment.MainFragmentActivity;
 import com.scxh.android1503.fragment.life.LifeMainActivity;
 import com.scxh.android1503.fragment.parmeter.ArgmentsMainActivity;
+import com.scxh.android1503.fragment.parmeter.ParamentFramgentToActivity;
 import com.scxh.android1503.handler.HandlerActivity;
 import com.scxh.android1503.http.HttpConnectActivity;
 import com.scxh.android1503.intent.ListIntentActivity;
@@ -150,6 +151,7 @@ public class MainActivity extends ListActivity {
 		addItem(data, "MainFragmentActivity", MainFragmentActivity.class);
 		addItem(data, "LifeMainActivity", LifeMainActivity.class);
 		addItem(data, "ArgmentsMainActivity", ArgmentsMainActivity.class);
+		addItem(data, "ParamentFramgentToActivity", ParamentFramgentToActivity.class);
 
 		return data;
 	}

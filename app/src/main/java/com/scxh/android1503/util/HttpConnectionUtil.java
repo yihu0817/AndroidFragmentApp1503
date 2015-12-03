@@ -1,11 +1,6 @@
 package com.scxh.android1503.util;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.HashMap;
+import android.os.AsyncTask;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -20,7 +15,12 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
-import android.os.AsyncTask;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class HttpConnectionUtil {
 	public enum Method {
@@ -60,6 +60,7 @@ public class HttpConnectionUtil {
 	public void asyncTaskHttps(final String url, final Method method,
 			final HashMap<String, Object> parameter, HttpCallBack httpCallBack) {
 		mHttpCallBack = httpCallBack;
+
 		new AsyncTask<String, Void, String>() {
 
 			@Override

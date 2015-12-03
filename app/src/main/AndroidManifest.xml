@@ -2,13 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.scxh.android1503"
-    android:installLocation="internalOnly"
-    android:versionCode="1"
-    android:versionName="1.0">
+    android:installLocation="internalOnly">
 
-    <uses-sdk
+    <!--
+        <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
+    -->
+
 
     <!--
         <instrumentation
@@ -238,7 +239,8 @@
         </receiver>
 
         <activity android:name=".fragment.life.LifeMainActivity" />
-        <activity android:name=".fragment.parmeter.ArgmentsMainActivity"></activity>
+        <activity android:name=".fragment.parmeter.ArgmentsMainActivity" />
+        <activity android:name=".fragment.parmeter.ParamentFramgentToActivity"></activity>
     </application>
 
 </manifest>

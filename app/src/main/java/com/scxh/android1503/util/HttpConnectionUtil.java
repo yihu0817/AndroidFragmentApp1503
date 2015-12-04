@@ -111,9 +111,7 @@ public class HttpConnectionUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 		return str;
-
 	}
 
 	/**

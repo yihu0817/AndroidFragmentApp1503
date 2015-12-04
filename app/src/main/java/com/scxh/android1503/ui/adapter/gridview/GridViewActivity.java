@@ -1,6 +1,5 @@
 package com.scxh.android1503.ui.adapter.gridview;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -35,8 +34,8 @@ public class GridViewActivity extends Activity {
 		setContentView(R.layout.adapter_gridview_layout);
 
 		/**设置ActionBar具有导航功能*/
-		ActionBar actionBar = getActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+//		ActionBar actionBar = getActionBar();
+//		actionBar.setDisplayHomeAsUpEnabled(true);
 		
 		mGridView = (GridView) findViewById(R.id.adpater_gridView);
 

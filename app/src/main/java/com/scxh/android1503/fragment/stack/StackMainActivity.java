@@ -34,7 +34,7 @@ public class StackMainActivity extends Activity implements View.OnClickListener 
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.add(R.id.static_container_fragment_layout,
                         CountingFragment.newInstance(++mStackLevel));
-                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);/**动画效果*/
                 ft.addToBackStack(null); /**添加当前Fragment到回退栈*/
                 ft.commit();
                 break;

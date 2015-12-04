@@ -18,6 +18,8 @@ import com.scxh.android1503.fragment.life.LifeMainActivity;
 import com.scxh.android1503.fragment.parmeter.ArgmentsMainActivity;
 import com.scxh.android1503.fragment.parmeter.ParamentFramgentToActivity;
 import com.scxh.android1503.fragment.stack.StackMainActivity;
+import com.scxh.android1503.fragment.subfragment.ListFragmentMainActivity;
+import com.scxh.android1503.fragment.tab.TabMainActivity;
 import com.scxh.android1503.handler.HandlerActivity;
 import com.scxh.android1503.http.HttpConnectActivity;
 import com.scxh.android1503.intent.ListIntentActivity;
@@ -154,6 +156,8 @@ public class MainActivity extends ListActivity {
 		addItem(data, "ArgmentsMainActivity", ArgmentsMainActivity.class);
 		addItem(data, "ParamentFramgentToActivity", ParamentFramgentToActivity.class);
 		addItem(data, "StackMainActivity", StackMainActivity.class);
+		addItem(data, "ListFragmentMainActivity", ListFragmentMainActivity.class);
+		addItem(data, "TabMainActivity", TabMainActivity.class);
 
 		return data;
 	}

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -60,6 +61,7 @@ public class PageListActivity extends Activity {
 				currentPage = 1;
 				setDataByHttpConnectionUtil(currentPage);
 			}
+
 			/**
 			 * 上拉加载更多
 			 */
@@ -70,14 +72,20 @@ public class PageListActivity extends Activity {
 					currentPage = mPageCount;
 					// 当加载到最后一页时，隐藏加载更多
 					mListView.setPullLoadEnable(false);
-					Toast.makeText(PageListActivity.this, "已加载到最后一页",Toast.LENGTH_SHORT).show();
-				}else {
+					Toast.makeText(PageListActivity.this, "已加载到最后一页", Toast.LENGTH_SHORT).show();
+				} else {
 					setDataByHttpConnectionUtil(currentPage);
 				}
 			}
 		});
-	}
 
+		mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Toast.makeText(PageListActivity.this,"position :"+position,Toast.LENGTH_SHORT).show();
+			}
+		});
+	}
 
 	/**
 	 * 从网络异步获取数据，刷新适配器

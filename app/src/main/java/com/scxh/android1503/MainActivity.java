@@ -21,6 +21,7 @@ import com.scxh.android1503.fragment.stack.StackMainActivity;
 import com.scxh.android1503.fragment.subfragment.ListFragmentMainActivity;
 import com.scxh.android1503.fragment.tab.RelpaceMainActivity;
 import com.scxh.android1503.fragment.tab.TabMainActivity;
+import com.scxh.android1503.fragment.viewpager.ViewPagerMainActivity;
 import com.scxh.android1503.handler.HandlerActivity;
 import com.scxh.android1503.http.HttpConnectActivity;
 import com.scxh.android1503.intent.ListIntentActivity;
@@ -45,6 +46,7 @@ import com.scxh.android1503.ui.adapter.gridview.GridViewActivity;
 import com.scxh.android1503.ui.adapter.spinner.SpinnerActivity;
 import com.scxh.android1503.ui.adapter.viewpager.ViewPagerActivity;
 import com.scxh.android1503.ui.dialog.DialogActivity;
+import com.scxh.android1503.ui.layout.LayoutActivity;
 import com.scxh.android1503.ui.listview.refresh.PageListActivity;
 import com.scxh.android1503.ui.menu.MenuActionBarActivity;
 import com.scxh.android1503.ui.menu.MenuContextActivity;
@@ -160,6 +162,7 @@ public class MainActivity extends ListActivity {
 		addItem(data, "ListFragmentMainActivity", ListFragmentMainActivity.class);
 		addItem(data, "TabMainActivity", TabMainActivity.class);
 		addItem(data, "RelpaceMainActivity", RelpaceMainActivity.class);
+		addItem(data, "ViewPagerMainActivity", ViewPagerMainActivity.class);
 
 		return data;
 	}

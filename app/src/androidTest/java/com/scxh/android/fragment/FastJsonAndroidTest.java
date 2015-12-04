@@ -1,4 +1,4 @@
-package com.scxh.android1503.dataparser.json;
+package com.scxh.android.fragment;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,6 +12,11 @@ import android.test.AndroidTestCase;
 
 import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
+import com.scxh.android1503.dataparser.json.MerchantInfo;
+import com.scxh.android1503.dataparser.json.MerchantRoot;
+import com.scxh.android1503.dataparser.json.PageInfo;
+import com.scxh.android1503.dataparser.json.UserBean;
+import com.scxh.android1503.dataparser.json.UserRoot;
 import com.scxh.android1503.http.MerchantBean;
 import com.scxh.android1503.util.Logs;
 

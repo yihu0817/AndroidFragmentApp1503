@@ -1,4 +1,4 @@
-package com.scxh.android1503.androidjunit;
+package com.scxh.android.fragment;
 
 import android.app.Instrumentation;
 import android.test.ActivityInstrumentationTestCase2;

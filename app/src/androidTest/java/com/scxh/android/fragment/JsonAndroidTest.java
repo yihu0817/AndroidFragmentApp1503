@@ -1,16 +1,4 @@
-package com.scxh.android1503.dataparser.json;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+package com.scxh.android.fragment;
 
 import android.content.res.AssetManager;
 import android.test.AndroidTestCase;
@@ -19,6 +7,18 @@ import com.scxh.android1503.util.HttpConnectionUtil;
 import com.scxh.android1503.util.HttpConnectionUtil.HttpCallBack;
 import com.scxh.android1503.util.HttpConnectionUtil.Method;
 import com.scxh.android1503.util.Logs;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 /**
  *  1.什么JSON
  *  2.JSON 规则

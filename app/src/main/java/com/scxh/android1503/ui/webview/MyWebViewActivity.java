@@ -2,7 +2,6 @@ package com.scxh.android1503.ui.webview;
 
 import java.io.File;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -53,7 +52,6 @@ public class MyWebViewActivity extends Activity {
 	private WebView mWebView;
 	private String url = "http://192.168.1.156:8080/html/index.html";
 //	private String url = "http://m.dianhua.cn/detail/31ccb426119d3c9eaa794df686c58636121d38bc?apikey=jFaWGVHdFVhekZYWTBWV1ZHSkZOVlJWY&app=com.yulore.yellowsdk_ios&uid=355136051337627";
-	@SuppressLint("JavascriptInterface")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

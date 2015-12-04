@@ -1,9 +1,5 @@
 package com.scxh.android1503.ui.menu;
 
-import java.lang.reflect.Field;
-
-import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -20,15 +16,16 @@ import android.widget.Toast;
 import com.scxh.android1503.R;
 import com.scxh.android1503.ui.widget.EditTextActivity;
 
-@SuppressLint("NewApi") 
+import java.lang.reflect.Field;
+
 public class MenuActionBarActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.menu_option_layout);
 
-		ActionBar actionBar = getActionBar();
-		actionBar.setDisplayHomeAsUpEnabled(true);
+//		ActionBar actionBar = getActionBar();
+//		actionBar.setDisplayHomeAsUpEnabled(true);
 		
 		setOverFlowShowingAlways();
 	}

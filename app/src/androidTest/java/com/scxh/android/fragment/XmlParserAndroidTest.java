@@ -1,14 +1,17 @@
-package com.scxh.android1503.dataparser.xml;
+package com.scxh.android.fragment;
+
+import android.test.AndroidTestCase;
+
+import com.scxh.android1503.dataparser.xml.Book;
+import com.scxh.android1503.dataparser.xml.BookParser;
+import com.scxh.android1503.dataparser.xml.PullBookParser;
+import com.scxh.android1503.util.Logs;
+
+import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-
-import org.xmlpull.v1.XmlPullParserException;
-
-import android.test.AndroidTestCase;
-
-import com.scxh.android1503.util.Logs;
 
 public class XmlParserAndroidTest extends AndroidTestCase {
 	@Override

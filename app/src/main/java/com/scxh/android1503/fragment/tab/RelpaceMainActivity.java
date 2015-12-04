@@ -8,6 +8,7 @@ import android.widget.RadioGroup;
 
 import com.scxh.android1503.R;
 import com.scxh.android1503.fragment.parmeter.MessageFragment;
+import com.scxh.android1503.util.Logs;
 
 public class RelpaceMainActivity extends Activity {
     private RadioGroup mRadioGroup;
@@ -28,6 +29,7 @@ public class RelpaceMainActivity extends Activity {
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 switch (checkedId) {
                     case R.id.tab_radio_one:
+                        Logs.v("messageFragmentOne >>> :"+messageFragmentOne);
                         if(messageFragmentOne == null){
                             messageFragmentOne = MessageFragment.newInstance("第一个Fragment");
                         }

@@ -54,7 +54,7 @@
         <activity android:name=".store.preferce.SharePreferenceActivity" />
         <activity android:name=".ui.scroll.ScroListViewOneActivity" />
         <activity
-            android:name=".LayoutActivity"
+            android:name=".ui.layout.LayoutActivity"
             android:label="布局学习" />
         <activity
             android:name=".ui.layout.LinearlayoutActivity"
@@ -244,7 +244,8 @@
         <activity android:name=".fragment.stack.StackMainActivity" />
         <activity android:name=".fragment.subfragment.ListFragmentMainActivity" />
         <activity android:name=".fragment.tab.TabMainActivity" />
-        <activity android:name=".fragment.tab.RelpaceMainActivity"></activity>
+        <activity android:name=".fragment.tab.RelpaceMainActivity" />
+        <activity android:name=".fragment.viewpager.ViewPagerMainActivity"></activity>
     </application>
 
 </manifest>

@@ -2,7 +2,6 @@ package com.scxh.android1503.ui.menu;
 
 import java.lang.reflect.Field;
 
-import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -24,7 +23,6 @@ import android.widget.Toast;
 
 import com.scxh.android1503.R;
 
-@SuppressLint("NewApi")
 public class MenuContextActivity extends Activity {
 	private ListView mListView;
 	private String[] mData = { "选项菜单", "上下文菜单", "弹出菜单" };

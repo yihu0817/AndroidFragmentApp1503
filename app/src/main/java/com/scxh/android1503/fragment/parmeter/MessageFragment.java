@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.scxh.android1503.R;
+import com.scxh.android1503.util.Logs;
 
 public class MessageFragment extends Fragment {
     private String message = "";
@@ -25,13 +26,15 @@ public class MessageFragment extends Fragment {
     }
 
     @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
+    public void onAttach(Activity context) {
+        super.onAttach(context);
+        Logs.v(message+"onAttach>>>>>>>>>>>>>");
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Logs.v(message+"onCreate>>>>>>>>>>>>>");
         if(getArguments() != null){
             message = getArguments().getString("MESSAGE");
         }
@@ -40,7 +43,7 @@ public class MessageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        Logs.v(message+"onCreateView>>>>>>>>>>>>>");
         View v = inflater.inflate(R.layout.fragment_message_layout, container, false);
         TextView msgTxt = (TextView) v.findViewById(R.id.argment_show_msg_txt);
 
@@ -51,4 +54,51 @@ public class MessageFragment extends Fragment {
         return v;
     }
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Logs.v(message+"onActivityCreated>>>>>>>>>>>>>");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Logs.w(message+"onStart>>>>>>>>>>");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Logs.i(message+"onResume>>>>>>>>>>");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Logs.d(message+"onPause>>>>>>>>>>>>");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Logs.v(message+"onStop>>>>>>>>>>>>>");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Logs.e(message+"onDestroyView>>>>>>>>>>>>>");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Logs.w(message+"onDestroy>>>>>>>>>>>>>");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Logs.i(message+"onDetach>>>>>>>>>>>>>");
+    }
 }

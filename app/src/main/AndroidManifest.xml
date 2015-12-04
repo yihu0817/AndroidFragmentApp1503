@@ -243,7 +243,8 @@
         <activity android:name=".fragment.parmeter.ParamentFramgentToActivity" />
         <activity android:name=".fragment.stack.StackMainActivity" />
         <activity android:name=".fragment.subfragment.ListFragmentMainActivity" />
-        <activity android:name=".fragment.tab.TabMainActivity"></activity>
+        <activity android:name=".fragment.tab.TabMainActivity" />
+        <activity android:name=".fragment.tab.RelpaceMainActivity"></activity>
     </application>
 
 </manifest>

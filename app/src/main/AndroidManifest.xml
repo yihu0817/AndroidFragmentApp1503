@@ -245,7 +245,9 @@
         <activity android:name=".fragment.subfragment.ListFragmentMainActivity" />
         <activity android:name=".fragment.tab.TabMainActivity" />
         <activity android:name=".fragment.tab.RelpaceMainActivity" />
-        <activity android:name=".fragment.viewpager.ViewPagerMainActivity"></activity>
+        <activity android:name=".fragment.viewpager.ViewPagerMainActivity" />
+        <activity android:name=".animator.AnimatorMainActivity" />
+        <activity android:name=".fragment.viewpager.ImageLoaderMainActivity"></activity>
     </application>
 
 </manifest>

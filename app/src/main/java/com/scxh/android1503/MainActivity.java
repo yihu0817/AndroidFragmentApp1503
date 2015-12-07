@@ -21,6 +21,7 @@ import com.scxh.android1503.fragment.stack.StackMainActivity;
 import com.scxh.android1503.fragment.subfragment.ListFragmentMainActivity;
 import com.scxh.android1503.fragment.tab.RelpaceMainActivity;
 import com.scxh.android1503.fragment.tab.TabMainActivity;
+import com.scxh.android1503.fragment.viewpager.ImageLoaderMainActivity;
 import com.scxh.android1503.fragment.viewpager.ViewPagerMainActivity;
 import com.scxh.android1503.handler.HandlerActivity;
 import com.scxh.android1503.http.HttpConnectActivity;
@@ -163,6 +164,7 @@ public class MainActivity extends ListActivity {
 		addItem(data, "TabMainActivity", TabMainActivity.class);
 		addItem(data, "RelpaceMainActivity", RelpaceMainActivity.class);
 		addItem(data, "ViewPagerMainActivity", ViewPagerMainActivity.class);
+		addItem(data, "ImageLoaderMainActivity", ImageLoaderMainActivity.class);
 
 		return data;
 	}

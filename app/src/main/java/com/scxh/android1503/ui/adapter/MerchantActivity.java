@@ -18,7 +18,7 @@ import com.scxh.android1503.util.HttpConnectionUtil;
 import com.scxh.android1503.util.HttpConnectionUtil.HttpCallBack;
 import com.scxh.android1503.util.HttpConnectionUtil.Method;
 import com.scxh.android1503.util.Logs;
-import com.scxh.android1503.util.cache.AsyncMemoryFileCacheImageLoader;
+import com.warmtel.imagecache.AsyncMemoryFileCacheImageLoader;
 
 import org.json.JSONArray;
 import org.json.JSONException;

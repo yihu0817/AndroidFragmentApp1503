@@ -1,1 +1,1 @@
-include ':app', ':android-XListView-library'
+include ':app', ':android-XListView-library', ':Android-ImageCache-library'

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:scxh="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.scxh.android1503.ui.custom.TitleBarView
+        android:id="@+id/my_titlebarview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        scxh:title_text="标题"
+        scxh:left_text="返回"
+        scxh:right_text="设置"/>
+
+    <!--<com.scxh.android1503.ui.custom.MyView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        scxh:content="自定义控件"
+        scxh:isshow="true"
+        scxh:mybackground="@drawable/eq_bg"
+        scxh:textcolor="@android:color/white"
+        scxh:textpostion="left"
+        scxh:textsize="18sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="系统控件TextView"/>-->
+</RelativeLayout>

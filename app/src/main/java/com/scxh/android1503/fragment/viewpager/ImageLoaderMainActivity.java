@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Window;
 
 import com.scxh.android1503.R;
 import com.scxh.android1503.util.Constances;
@@ -19,6 +20,7 @@ public class ImageLoaderMainActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_image_loader_main_layout);
         mViewPager = (ViewPager) findViewById(R.id.imageloader_viewpager);
 

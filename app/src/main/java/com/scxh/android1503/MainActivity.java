@@ -46,6 +46,7 @@ import com.scxh.android1503.ui.adapter.SimpleAdapterActivity;
 import com.scxh.android1503.ui.adapter.gridview.GridViewActivity;
 import com.scxh.android1503.ui.adapter.spinner.SpinnerActivity;
 import com.scxh.android1503.ui.adapter.viewpager.ViewPagerActivity;
+import com.scxh.android1503.ui.custom.CustomMainActivity;
 import com.scxh.android1503.ui.dialog.DialogActivity;
 import com.scxh.android1503.ui.layout.LayoutActivity;
 import com.scxh.android1503.ui.listview.refresh.PageListActivity;
@@ -165,6 +166,7 @@ public class MainActivity extends ListActivity {
 		addItem(data, "RelpaceMainActivity", RelpaceMainActivity.class);
 		addItem(data, "ViewPagerMainActivity", ViewPagerMainActivity.class);
 		addItem(data, "ImageLoaderMainActivity", ImageLoaderMainActivity.class);
+		addItem(data, "CustomMainActivity", CustomMainActivity.class);
 
 		return data;
 	}

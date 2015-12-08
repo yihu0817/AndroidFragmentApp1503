@@ -11,7 +11,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.scxh.android1503.R;
-import com.warmtel.imagecache.AsyncMemoryFileCacheImageLoader;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,7 +51,7 @@ public class ImageLoaderFragment extends Fragment {
 
         mProgressBar.setVisibility(View.VISIBLE);
 
-        /*Picasso.with(getActivity()).load(url).into(mImageView, new Callback() {
+        Picasso.with(getActivity()).load(url).into(mImageView, new Callback() {
             @Override
             public void onSuccess() {
                 mProgressBar.setVisibility(View.GONE);
@@ -60,9 +61,9 @@ public class ImageLoaderFragment extends Fragment {
             public void onError() {
                 Toast.makeText(getActivity(), "加载图片出错", Toast.LENGTH_SHORT).show();
             }
-        });*/
+        });
 
-        AsyncMemoryFileCacheImageLoader.getInstance(getActivity()).loadBitmap(getResources(), url, mImageView,
+       /* AsyncMemoryFileCacheImageLoader.getInstance(getActivity()).loadBitmap(getResources(), url, mImageView,
                 new AsyncMemoryFileCacheImageLoader.Callback() {
                     @Override
                     public void onSuccess() {
@@ -74,6 +75,6 @@ public class ImageLoaderFragment extends Fragment {
                         Toast.makeText(getActivity(), "加载图片出错", Toast.LENGTH_SHORT).show();
                     }
 
-                });
+                });*/
     }
 }

@@ -36,7 +36,6 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/title_bar"
-
                 android:orientation="horizontal">
 
                 <RadioButton

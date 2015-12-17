@@ -474,30 +474,30 @@ public class HttpConnectActivity extends Activity implements OnClickListener {
 				jsonObject.put("username", "张三");
 				jsonObject.put("password", "123456");
 				String jsonstr = jsonObject.toString();
-				
+
 				HashMap<String, Object> map = new HashMap<String, Object>();
 				map.put("jsonstr", jsonstr);
-				
+
 				new HttpConnectionUtil().asyncTaskHttps("http://192.168.1.156/app/jsonurl", Method.GET, map, new HttpCallBack() {
-					
+
 					@Override
 					public void returnMessage(String message) {
 						Logs.v("message :" + message);
-						
+
 						mShowMessageTxt.setText(message);
 					}
 				});
-				
-				
+
+
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}*/
 
-			
-			
-			
-			
-			
+
+
+
+
+
 			break;
 		}
 	}

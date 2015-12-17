@@ -249,7 +249,8 @@
         <activity android:name=".animator.AnimatorMainActivity" />
         <activity android:name=".fragment.viewpager.ImageLoaderMainActivity" />
         <activity android:name=".ui.custom.CustomMainActivity" />
-        <activity android:name=".slidemenu.SlideMenuMainActivity"></activity>
+        <activity android:name=".slidemenu.SlideMenuMainActivity" />
+        <activity android:name=".http.cache.HttpCacheActivity"></activity>
     </application>
 
 </manifest>

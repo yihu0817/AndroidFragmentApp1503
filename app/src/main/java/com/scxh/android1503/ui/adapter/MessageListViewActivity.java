@@ -1,7 +1,5 @@
 package com.scxh.android1503.ui.adapter;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
@@ -18,7 +16,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.scxh.android1503.R;
-import com.scxh.android1503.util.Logs;
+
+import java.util.ArrayList;
 
 public class MessageListViewActivity extends Activity {
 	private static final int TYPE_PICTURE = 0;// 图片
@@ -135,6 +134,16 @@ public class MessageListViewActivity extends Activity {
 			titleTxt.setText("ListView动态添加项");
 		}
 
+		@Override
+		public int getItemViewType(int position) {
+			MessageBean messageBean = (MessageBean) getItem(position);
+			if(messageBean.getType() == TYPE_PICTURE){
+				return 0;
+			}else{
+				return 1;
+			}
+		}
+
 		public void setListData(ArrayList<MessageBean> list) {
 			this.list = list;
 			notifyDataSetChanged();
@@ -158,6 +167,27 @@ public class MessageListViewActivity extends Activity {
 		@Override
 		public View getView(final int position, View convertView,
 				ViewGroup parent) {
+			if(getItemViewType(position) == 0){
+				return getTextView(position,convertView,parent);
+			}else{
+				return getPictrueView(position,convertView,parent);
+			}
+		}
+
+		public View getTextView(final int position, View convertView,ViewGroup parent){
+			if(convertView == null){
+				convertView = layoutInflater.inflate(android.R.layout.simple_list_item_1,null);
+			}
+
+			TextView textView = (TextView)convertView;
+			MessageBean messageBean = (MessageBean) getItem(position);
+			textView.setText(messageBean.getTitle());
+
+			return convertView;
+		}
+
+		public View getPictrueView(final int position, View convertView,
+								   ViewGroup parent){
 			final View v;
 			ViewHodler holder;
 			if (convertView == null) {
@@ -201,13 +231,13 @@ public class MessageListViewActivity extends Activity {
 					layout.getChildAt(1).setVisibility(View.VISIBLE);
 				}
 			}
-			
+
 			holder.iconImg.setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View vs) {
 					selectPotion = position;  //记录当前点击位置
-					
+
 					if (titleTxt.getParent() != null) {  //如果titleTxt已经添加则移除
 						LinearLayout layout = (LinearLayout) titleTxt.getParent();
 						layout.removeView(titleTxt);
@@ -216,10 +246,11 @@ public class MessageListViewActivity extends Activity {
 					titleTxt.setVisibility(View.VISIBLE);
 				}
 			});
-			
-			
+
+
 			return v;
 		}
+
 
 		public class ViewHodler {
 			ImageView iconImg;

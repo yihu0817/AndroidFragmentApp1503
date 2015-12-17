@@ -3,6 +3,7 @@ package com.scxh.android1503.fragment.life;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,11 @@ public class LifeFragment extends Fragment {
         Logs.i("onAttach>> Activity  >>>>>");
     }
 
-   /* @Override
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
+    /* @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         Logs.e("onAttach>  Context  >>>>>>");

@@ -25,6 +25,7 @@ import com.scxh.android1503.fragment.viewpager.ImageLoaderMainActivity;
 import com.scxh.android1503.fragment.viewpager.ViewPagerMainActivity;
 import com.scxh.android1503.handler.HandlerActivity;
 import com.scxh.android1503.http.HttpConnectActivity;
+import com.scxh.android1503.http.cache.HttpCacheActivity;
 import com.scxh.android1503.intent.ListIntentActivity;
 import com.scxh.android1503.mp3.Mp3Activity;
 import com.scxh.android1503.mp3.Mp3ListActivity;
@@ -33,6 +34,7 @@ import com.scxh.android1503.notification.NotificationActivity;
 import com.scxh.android1503.receive.MyBroadCastActivity;
 import com.scxh.android1503.service.MyBinderActivity;
 import com.scxh.android1503.service.TestServcieActivity;
+import com.scxh.android1503.slidemenu.SlideMenuMainActivity;
 import com.scxh.android1503.store.db.MyCursorActivity;
 import com.scxh.android1503.store.db.MyDBActivity;
 import com.scxh.android1503.store.file.FileManagerActivity;
@@ -167,6 +169,8 @@ public class MainActivity extends ListActivity {
 		addItem(data, "ViewPagerMainActivity", ViewPagerMainActivity.class);
 		addItem(data, "ImageLoaderMainActivity", ImageLoaderMainActivity.class);
 		addItem(data, "CustomMainActivity", CustomMainActivity.class);
+		addItem(data, "SlideMenuMainActivity", SlideMenuMainActivity.class);
+		addItem(data, "网络字符缓存HttpCacheActivity", HttpCacheActivity.class);
 
 		return data;
 	}

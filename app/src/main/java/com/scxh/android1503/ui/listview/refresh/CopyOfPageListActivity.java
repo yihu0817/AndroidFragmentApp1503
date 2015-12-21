@@ -12,10 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.scxh.android1503.R;
 import com.scxh.android1503.util.HttpConnectionUtil;
@@ -30,7 +27,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import cz.msebera.android.httpclient.Header;
 
 public class CopyOfPageListActivity extends Activity implements OnScrollListener{
 	private ListView mListView;
@@ -90,35 +86,35 @@ public class CopyOfPageListActivity extends Activity implements OnScrollListener
 		params.put("pageNo", String.valueOf(pageNo));
 		params.put("pageSize", "20");
 
-		AsyncHttpClient client = new AsyncHttpClient();
-		client.get("http://192.168.1.145/app/page", params,
-				new JsonHttpResponseHandler() {
-					@Override
-					public void onSuccess(int statusCode, Header[] headers,JSONObject response) {
-						Logs.v("statusCode :" + statusCode);
-						ArrayList<String> list = new ArrayList<String>();
-						try {
-							JSONArray contentJson = response.getJSONArray("content");
-							for (int i = 0; i < contentJson.length(); i++) {
-								JSONObject msgObject = contentJson.getJSONObject(i);
-								String msg = msgObject.getString("msg");
-								Logs.v("msg :" + msg);
-								list.add(msg);
-							}
-							adapter.addListData(list);
-						} catch (JSONException e) {
-							e.printStackTrace();
-						}
-					}
-
-					@Override
-					public void onFailure(int statusCode, Header[] headers,
-							Throwable throwable, JSONObject errorResponse) {
-						Logs.v("onFailure >>>>>>>>>>>>>statusCode ：  "+statusCode);
-						Toast.makeText(CopyOfPageListActivity.this, statusCode+"服务器出错！", Toast.LENGTH_SHORT).show();
-					}
-
-				});
+//		AsyncHttpClient client = new AsyncHttpClient();
+//		client.get("http://192.168.1.145/app/page", params,
+//				new JsonHttpResponseHandler() {
+//					@Override
+//					public void onSuccess(int statusCode, Header[] headers,JSONObject response) {
+//						Logs.v("statusCode :" + statusCode);
+//						ArrayList<String> list = new ArrayList<String>();
+//						try {
+//							JSONArray contentJson = response.getJSONArray("content");
+//							for (int i = 0; i < contentJson.length(); i++) {
+//								JSONObject msgObject = contentJson.getJSONObject(i);
+//								String msg = msgObject.getString("msg");
+//								Logs.v("msg :" + msg);
+//								list.add(msg);
+//							}
+//							adapter.addListData(list);
+//						} catch (JSONException e) {
+//							e.printStackTrace();
+//						}
+//					}
+//
+//					@Override
+//					public void onFailure(int statusCode, Header[] headers,
+//							Throwable throwable, JSONObject errorResponse) {
+//						Logs.v("onFailure >>>>>>>>>>>>>statusCode ：  "+statusCode);
+//						Toast.makeText(CopyOfPageListActivity.this, statusCode+"服务器出错！", Toast.LENGTH_SHORT).show();
+//					}
+//
+//				});
 	}
 
 	public class PageListAdapter extends BaseAdapter {

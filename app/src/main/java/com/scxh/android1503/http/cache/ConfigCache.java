@@ -13,10 +13,6 @@ import java.io.InputStreamReader;
 
 public class ConfigCache {
     public static String mSdcardDataDir = "";
-    private static final String TAG = ConfigCache.class.getName();
-
-    public static final int CONFIG_CACHE_MOBILE_TIMEOUT = 3600000;  //1 hour
-    public static final int CONFIG_CACHE_WIFI_TIMEOUT = 300000;   //5 minute
 
     public static String getUrlCache(String url) {
         if (url == null) {
@@ -26,23 +22,7 @@ public class ConfigCache {
         String result = null;
         File file = new File(mSdcardDataDir + "/" + getCacheDecodeString(url));
         if (file.exists() && file.isFile()) {
-//            long expiredTime = System.currentTimeMillis() - file.lastModified();
-//            Log.d(TAG, file.getAbsolutePath() + " expiredTime:" + expiredTime / 60000 + "min");
-            //1. in case the system time is incorrect (the time is turn back long ago)
-            //2. when the network is invalid, you can only read the cache
-//            if (AppApplication.mNetWorkState != NetworkUtils.NETWORN_NONE && expiredTime < 0) {
-//                return null;
-//            }
-//            if (AppApplication.mNetWorkState == NetworkUtils.NETWORN_WIFI
-//                    && expiredTime > CONFIG_CACHE_WIFI_TIMEOUT) {
-//                return null;
-//            } else if (AppApplication.mNetWorkState == NetworkUtils.NETWORN_MOBILE
-//                    && expiredTime > CONFIG_CACHE_MOBILE_TIMEOUT) {
-//                return null;
-//            }
-
             result = readTextFile(file);
-
         }
         return result;
     }

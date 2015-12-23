@@ -22,6 +22,14 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ *  从网络获取数据工具类
+ *  1.异步操作
+ *  2.实现HTTP网络连接
+ *  3.Get和Post请求，参数
+ *  4.接口回调，回传响应结果数据
+ *
+ */
 public class HttpConnectionUtil {
 	public enum Method {
 		GET,POST
@@ -29,7 +37,7 @@ public class HttpConnectionUtil {
 
 	/** 第一步定义接口 */
 	public interface HttpCallBack {
-		public void returnMessage(String message);
+		void returnMessage(String message);
 	}
 
 	/** 注册接口 */

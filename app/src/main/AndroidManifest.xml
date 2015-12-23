@@ -250,7 +250,8 @@
         <activity android:name=".fragment.viewpager.ImageLoaderMainActivity" />
         <activity android:name=".ui.custom.CustomMainActivity" />
         <activity android:name=".slidemenu.SlideMenuMainActivity" />
-        <activity android:name=".http.cache.HttpCacheActivity"></activity>
+        <activity android:name=".http.cache.HttpCacheActivity" />
+        <activity android:name=".http.volley.VolleyMainActivity"></activity>
     </application>
 
 </manifest>

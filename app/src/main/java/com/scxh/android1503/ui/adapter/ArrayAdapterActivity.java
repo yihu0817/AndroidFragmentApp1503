@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -39,6 +38,9 @@ public class ArrayAdapterActivity extends Activity implements
 		mListView.setAdapter(adapter);
 
 		mListView.setOnItemClickListener(this);
+
+
+
 	}
 
 	@Override

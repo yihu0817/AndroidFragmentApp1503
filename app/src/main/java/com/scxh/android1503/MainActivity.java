@@ -26,6 +26,7 @@ import com.scxh.android1503.fragment.viewpager.ViewPagerMainActivity;
 import com.scxh.android1503.handler.HandlerActivity;
 import com.scxh.android1503.http.HttpConnectActivity;
 import com.scxh.android1503.http.cache.HttpCacheActivity;
+import com.scxh.android1503.http.volley.VolleyMainActivity;
 import com.scxh.android1503.intent.ListIntentActivity;
 import com.scxh.android1503.mp3.Mp3Activity;
 import com.scxh.android1503.mp3.Mp3ListActivity;
@@ -171,6 +172,7 @@ public class MainActivity extends ListActivity {
 		addItem(data, "CustomMainActivity", CustomMainActivity.class);
 		addItem(data, "SlideMenuMainActivity", SlideMenuMainActivity.class);
 		addItem(data, "网络字符缓存HttpCacheActivity", HttpCacheActivity.class);
+		addItem(data, "VolleyMainActivity", VolleyMainActivity.class);
 
 		return data;
 	}

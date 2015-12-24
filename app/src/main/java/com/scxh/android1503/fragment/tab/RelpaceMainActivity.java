@@ -49,6 +49,9 @@ public class RelpaceMainActivity extends Activity {
 
                         break;
                 }
+                ft.setCustomAnimations(
+                        R.animator.card_flip_right_in, R.animator.card_flip_right_out,
+                        R.animator.card_flip_left_in, R.animator.card_flip_left_out);
                 ft.commit();
             }
         });

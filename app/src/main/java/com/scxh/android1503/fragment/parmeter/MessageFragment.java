@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.scxh.android1503.R;
@@ -46,7 +47,14 @@ public class MessageFragment extends Fragment {
         Logs.v(message+"onCreateView>>>>>>>>>>>>>");
         View v = inflater.inflate(R.layout.fragment_message_layout, container, false);
         TextView msgTxt = (TextView) v.findViewById(R.id.argment_show_msg_txt);
-
+        LinearLayout layout = (LinearLayout) v.findViewById(R.id.replace_framgent_layout);
+        if(message.contains("一")){
+            layout.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_bright));
+        }else if (message.contains("二")){
+            layout.setBackgroundColor(getResources().getColor(android.R.color.holo_green_dark));
+        }else if (message.contains("三")){
+            layout.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
+        }
         /**获取从Activity传来的值*/
 
 

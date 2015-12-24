@@ -2,7 +2,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:id="@+id/replace_framgent_layout">
 
     <TextView
         android:id="@+id/argment_show_msg_txt"

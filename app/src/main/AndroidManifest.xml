@@ -251,7 +251,9 @@
         <activity android:name=".ui.custom.CustomMainActivity" />
         <activity android:name=".slidemenu.SlideMenuMainActivity" />
         <activity android:name=".http.cache.HttpCacheActivity" />
-        <activity android:name=".http.volley.VolleyMainActivity"></activity>
+        <activity android:name=".http.volley.VolleyMainActivity" />
+        <activity android:name=".animator.AnimatorOneActivity" />
+        <activity android:name=".animator.AnimationTwoActivity"></activity>
     </application>
 
 </manifest>

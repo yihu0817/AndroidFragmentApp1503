@@ -1,7 +1,7 @@
 package com.scxh.android1503.util;
 
 public class Constances {
-	public static final String BASE_URL = "http://192.168.1.145";
+	public static final String BASE_URL = "http://192.168.1.139";
 	
 	public interface ParameterType{
 		public static final int TYPE_BASEDATE = 1; //基本数据类型

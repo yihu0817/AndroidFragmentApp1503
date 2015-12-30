@@ -1,5 +1,42 @@
 package com.scxh.android1503.http;
 
+import android.app.Activity;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Environment;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.scxh.android1503.R;
+import com.scxh.android1503.util.Constances;
+import com.scxh.android1503.util.HttpConnectionUtil;
+import com.scxh.android1503.util.HttpConnectionUtil.HttpCallBack;
+import com.scxh.android1503.util.HttpConnectionUtil.Method;
+import com.scxh.android1503.util.Logs;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.Headers;
+import com.squareup.okhttp.MediaType;
+import com.squareup.okhttp.MultipartBuilder;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -13,46 +50,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import android.app.Activity;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Environment;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.scxh.android1503.R;
-import com.scxh.android1503.util.HttpConnectionUtil;
-import com.scxh.android1503.util.HttpConnectionUtil.HttpCallBack;
-import com.scxh.android1503.util.HttpConnectionUtil.Method;
-import com.scxh.android1503.util.Logs;
-import com.squareup.okhttp.Callback;
-import com.squareup.okhttp.Headers;
-import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.MultipartBuilder;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.RequestBody;
-import com.squareup.okhttp.Response;
 
 public class HttpConnectActivity extends Activity implements OnClickListener {
 	private Button mConnectBtn, mGetConnetBtn, mPostConnetBtn,
@@ -90,7 +87,7 @@ public class HttpConnectActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.http_connect_btn:
-			String httpUrl = "http://192.168.1.156/app/print";
+			String httpUrl = Constances.BASE_URL+"/app/print";
 
 			new AsyncTask<String, Void, String>() {
 				@Override
@@ -129,7 +126,7 @@ public class HttpConnectActivity extends Activity implements OnClickListener {
 			break;
 
 		case R.id.http_connect_get_btn:
-			httpUrl = "http://192.168.1.156/app/login"; // //http://192.168.1.156/app/login?user=xiaoming&psw=abcd"
+			httpUrl = Constances.BASE_URL+"/app/login"; // //http://192.168.1.156/app/login?user=xiaoming&psw=abcd"
 
 			/** 解决get传参汉字乱码问题 */
 			String userName = "张三";
@@ -173,7 +170,7 @@ public class HttpConnectActivity extends Activity implements OnClickListener {
 
 			break;
 		case R.id.http_connect_post_btn:
-			httpUrl = "http://192.168.1.156/app/login";
+			httpUrl = Constances.BASE_URL+"/app/login";
 
 			new AsyncTask<String, Void, String>() {
 				@Override
@@ -215,7 +212,7 @@ public class HttpConnectActivity extends Activity implements OnClickListener {
 			}.execute(httpUrl);
 			break;
 		case R.id.http_client_get_btn:
-			httpUrl = "http://192.168.1.156/app/print";
+			httpUrl = Constances.BASE_URL+"/app/print";
 
 			AsyncTask<String, Void, String> task = new AsyncTask<String, Void, String>() {
 				@Override
@@ -253,7 +250,7 @@ public class HttpConnectActivity extends Activity implements OnClickListener {
 
 			break;
 		case R.id.http_client_connect_get_btn:
-			httpUrl = "http://192.168.1.156/app/login";
+			httpUrl = Constances.BASE_URL+"/app/login";
 			String parameter = "?user=admin&psw=123456";
 
 			httpUrl = httpUrl + parameter;
@@ -335,33 +332,12 @@ public class HttpConnectActivity extends Activity implements OnClickListener {
 				}
 			};
 
-			postTask.execute("http://192.168.1.156/app/login");
+			postTask.execute(Constances.BASE_URL+"/app/login");
 
 			break;
 		case R.id.http_client_btn:
-			/*
-			 * String url = "http://192.168.1.156/app/login"; HashMap<String,
-			 * Object> map = new HashMap(); map.put("user", "王二1");
-			 * map.put("psw", "abcd");
-			 * 
-			 * new HttpConnectionUtil().asyncTaskHttps(url,
-			 * HttpConnectionUtil.Method.POST, map, new HttpCallBack() {
-			 * 
-			 * @Override public void returnMessage(String message) {
-			 * mShowMessageTxt.setText(message); } });
-			 */
-
-			/*
-			 * String url = "http://192.168.1.156/app/print"; new
-			 * HttpConnectionUtil().asyncTaskHttp(url, Method.POST, new
-			 * HttpCallBack() {
-			 * 
-			 * @Override public void returnMessage(String message) { if(message
-			 * != null){ mShowMessageTxt.setText(message); } } });
-			 */
-
 			HttpConnectionUtil connect = new HttpConnectionUtil();
-			connect.asyncTaskHttp("http://192.168.1.156/json/students.txt",
+			connect.asyncTaskHttp(Constances.BASE_URL+"/app?jsonName=students",
 					Method.GET, new HttpCallBack() {
 
 						@Override
@@ -436,7 +412,7 @@ public class HttpConnectActivity extends Activity implements OnClickListener {
 							fileBody).build();
 
 			Request request = new Request.Builder()
-					.url("http://192.168.1.156/download")
+					.url(Constances.BASE_URL+"/app/download")
 					.post(requestBody).build();
 
 			mOkHttpClient.newCall(request).enqueue(new Callback() {

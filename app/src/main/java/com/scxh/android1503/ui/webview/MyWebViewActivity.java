@@ -1,7 +1,5 @@
 package com.scxh.android1503.ui.webview;
 
-import java.io.File;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +11,10 @@ import android.widget.Toast;
 
 import com.scxh.android1503.R;
 import com.scxh.android1503.ui.adapter.gridview.GridViewActivity;
+import com.scxh.android1503.util.Constances;
 import com.scxh.android1503.util.Logs;
+
+import java.io.File;
 /**
  * 当我们加载Html时候，会在我们data/应用package下生成database与cache两个文件夹:
 我们请求的Url记录是保存在webviewCache.db里，而url的内容是保存在webviewCache文件夹下.
@@ -50,7 +51,7 @@ www.360.com.cn的cache-control为max-age=60，在两种模式下都使用本地�
 public class MyWebViewActivity extends Activity {
 	private static final String APP_CACAHE_DIRNAME = "/webcache";
 	private WebView mWebView;
-	private String url = "http://192.168.1.156:8080/html/index.html";
+	private String url = Constances.BASE_URL+"/app/weding";
 //	private String url = "http://m.dianhua.cn/detail/31ccb426119d3c9eaa794df686c58636121d38bc?apikey=jFaWGVHdFVhekZYWTBWV1ZHSkZOVlJWY&app=com.yulore.yellowsdk_ios&uid=355136051337627";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

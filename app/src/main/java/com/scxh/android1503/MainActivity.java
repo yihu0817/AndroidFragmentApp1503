@@ -156,9 +156,9 @@ public class MainActivity extends ListActivity {
 		addItem(data, "LoadPictureActivity", LoadPictureActivity.class);
 		addItem(data, "GridViewAsyncTaskActivity", GridViewAsyncTaskActivity.class);
 		addItem(data, "MyWebViewActivity", MyWebViewActivity.class);
-		addItem(data, "HttpConnectActivity", HttpConnectActivity.class);
-		addItem(data, "MerchantActivity", MerchantActivity.class);
-		addItem(data, "PageListActivity", PageListActivity.class);
+		addItem(data, "网络基础HttpConnectActivity", HttpConnectActivity.class);
+		addItem(data, "商家Json解析MerchantActivity", MerchantActivity.class);
+		addItem(data, "分页XListView应运PageListActivity", PageListActivity.class);
 		addItem(data, "MainFragmentActivity", MainFragmentActivity.class);
 		addItem(data, "LifeMainActivity", LifeMainActivity.class);
 		addItem(data, "ArgmentsMainActivity", ArgmentsMainActivity.class);

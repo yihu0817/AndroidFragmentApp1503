@@ -144,6 +144,11 @@ public class MessageListViewActivity extends Activity {
 			}
 		}
 
+		@Override
+		public int getViewTypeCount() {
+			return 2;
+		}
+
 		public void setListData(ArrayList<MessageBean> list) {
 			this.list = list;
 			notifyDataSetChanged();

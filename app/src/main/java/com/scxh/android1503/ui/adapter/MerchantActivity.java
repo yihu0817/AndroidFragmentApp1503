@@ -46,7 +46,7 @@ public class MerchantActivity extends Activity {
 	public void getJsonStrByNet() {
 		/** 从网络获取请求json数据 */
 		new HttpConnectionUtil().asyncTaskHttp(
-				Constances.BASE_URL+"/app/merchant", Method.GET,
+				Constances.BASE_URL+"/app/merchant?jsonName=around", Method.GET,
 				new HttpCallBack() {
 					@Override
 					public void returnMessage(String message) {

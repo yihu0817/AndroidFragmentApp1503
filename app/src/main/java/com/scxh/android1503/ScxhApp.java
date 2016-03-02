@@ -2,6 +2,8 @@ package com.scxh.android1503;
 
 import android.app.Application;
 
+import com.scxh.android1503.http.okhttp.OkHttpManager;
+
 /**
  * 1.全局初始化操作
  * 2.定义的变量是全局变量，每个activity内都可以访问  (ScxhApp) getApplication();
@@ -12,6 +14,6 @@ public class ScxhApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        OkHttpManager.init(this);
     }
 }

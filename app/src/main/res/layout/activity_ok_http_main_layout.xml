@@ -30,4 +30,11 @@
         android:layout_marginTop="10dp"
         android:onClick="onPostFromRequestAsyncClientLisentner"
         android:text="Post异步请求提交表单数据" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onPostCacheRequestAsyncClientLisentner"
+        android:text="Post异步请求缓存" />
 </LinearLayout>

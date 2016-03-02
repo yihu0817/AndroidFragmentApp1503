@@ -3,12 +3,10 @@ package com.scxh.android1503.http;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.scxh.android1503.R;
 import com.scxh.android1503.util.Constances;
@@ -16,14 +14,6 @@ import com.scxh.android1503.util.HttpConnectionUtil;
 import com.scxh.android1503.util.HttpConnectionUtil.HttpCallBack;
 import com.scxh.android1503.util.HttpConnectionUtil.Method;
 import com.scxh.android1503.util.Logs;
-import com.squareup.okhttp.Callback;
-import com.squareup.okhttp.Headers;
-import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.MultipartBuilder;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.RequestBody;
-import com.squareup.okhttp.Response;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -38,7 +28,6 @@ import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -350,129 +339,10 @@ public class HttpConnectActivity extends Activity implements OnClickListener {
 			break;
 
 		case R.id.http_okhttp_btn:
-			// 创建okHttpClient对象
-			OkHttpClient mOkHttpClient = new OkHttpClient();
-			// 创建一个Request
-			// Request.Builder builder = new Request.Builder();
-			// builder.url("http://192.168.1.156/app/print");
-			// Request requese = builder.build();
-
-			/*
-			 * final Request request = new
-			 * Request.Builder().url("http://192.168.1.156/app/print").build();
-			 * // new call
-			 * 
-			 * // 请求加入调度 mOkHttpClient.newCall(request).enqueue(new Callback() {
-			 * 
-			 * @Override public void onFailure(Request request, IOException e) {
-			 * 
-			 * }
-			 * 
-			 * @Override public void onResponse(final Response response)throws
-			 * IOException { final String message = response.body().string();
-			 * runOnUiThread(new Runnable() {
-			 * 
-			 * @Override public void run() { mShowMessageTxt.setText(message);
-			 * 
-			 * } }); } });
-			 */
-
-			/*
-			 * FormEncodingBuilder builder = new FormEncodingBuilder();
-			 * builder.add("user","张三"); builder.add("pws","123");
-			 * 
-			 * Request request = new Request.Builder()
-			 * .url("http://192.168.1.156/app/login") .post(builder.build())
-			 * .build(); mOkHttpClient.newCall(request).enqueue(new Callback(){
-			 * 
-			 * @Override public void onFailure(Request arg0, IOException arg1) {
-			 * 
-			 * }
-			 * 
-			 * @Override public void onResponse(Response response) throws
-			 * IOException { final String message = response.body().string();
-			 * runOnUiThread(new Runnable() {
-			 * 
-			 * @Override public void run() { mShowMessageTxt.setText(message);
-			 * 
-			 * } });
-			 * 
-			 * }});
-			 */
-
-			File file = new File(Environment.getExternalStorageDirectory(),"Kalimba.mp3");
-
-			RequestBody fileBody = RequestBody.create(MediaType.parse("application/octet-stream"), file);
-
-			RequestBody requestBody = new MultipartBuilder()
-					.type(MultipartBuilder.FORM)
-					.addPart(
-							Headers.of("Content-Disposition",
-									"form-data; name=\"mFile\"; filename=\"Kalimba.mp3\""),
-							fileBody).build();
-
-			Request request = new Request.Builder()
-					.url(Constances.BASE_URL+"/app/download")
-					.post(requestBody).build();
-
-			mOkHttpClient.newCall(request).enqueue(new Callback() {
-
-				@Override
-				public void onFailure(Request arg0, IOException arg1) {
-					runOnUiThread(new Runnable() {
-						
-						@Override
-						public void run() {
-							Toast.makeText(HttpConnectActivity.this, "失败", Toast.LENGTH_SHORT).show();
-						}
-					});
-				}
-
-				@Override
-				public void onResponse(Response arg0) throws IOException {
-					Logs.v("成功!");
-						runOnUiThread(new Runnable() {
-						
-						@Override
-						public void run() {
-							Toast.makeText(HttpConnectActivity.this, "成功!", Toast.LENGTH_SHORT).show();
-						}
-					});
-				}
-			});
 
 			break;
 
 		case R.id.http_jsonhttp_btn:
-			//   url?jsonstr={"username":"张三","password":123456}
-			/*try {
-				JSONObject jsonObject = new JSONObject();
-				jsonObject.put("username", "张三");
-				jsonObject.put("password", "123456");
-				String jsonstr = jsonObject.toString();
-
-				HashMap<String, Object> map = new HashMap<String, Object>();
-				map.put("jsonstr", jsonstr);
-
-				new HttpConnectionUtil().asyncTaskHttps("http://192.168.1.156/app/jsonurl", Method.GET, map, new HttpCallBack() {
-
-					@Override
-					public void returnMessage(String message) {
-						Logs.v("message :" + message);
-
-						mShowMessageTxt.setText(message);
-					}
-				});
-
-
-			} catch (JSONException e) {
-				e.printStackTrace();
-			}*/
-
-
-
-
-
 
 			break;
 		}

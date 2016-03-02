@@ -38,10 +38,10 @@ public class JsonAndroidTest extends AndroidTestCase {
 
 	public void testjsonStr() throws JSONException, IOException {
 		/**
-		 * {"userName":"张三","passWord":123456};
-		 * {"student":{"name":"小明","age":18,"id":112,"sex":"男"}} 
-		 * {"students": [{"name":"小明","age":18,"id":112,"sex":"男"},{"name":"小王","age":17,"id":102,"sex":"女"} ] }
-		 */
+				* {"userName":"张三","passWord":123456};
+		* {"student":{"name":"小明","age":18,"id":112,"sex":"男"}}
+		* {"students": [{"name":"小明","age":18,"id":112,"sex":"男"},{"name":"小王","age":17,"id":102,"sex":"女"} ] }
+		*/
 
 		String jsonStr = "{\"userName\":\"张三\",\"passWord\":123456}";
 

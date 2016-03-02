@@ -1,8 +1,8 @@
 package com.scxh.android1503.store.preferce;
 
-import com.scxh.android1503.util.Logs;
-
 import android.test.AndroidTestCase;
+
+import com.scxh.android1503.util.Logs;
 
 public class SharePreferenceAndroidCase extends AndroidTestCase {
 	private SharePrefrenceOpenHelper mSharePrefrenceOpenHelper;
@@ -29,7 +29,7 @@ public class SharePreferenceAndroidCase extends AndroidTestCase {
 	}
 
 	public void testFindStudentByName() {
-		Student student = mSharePrefrenceOpenHelper.findStudentByName("李四");
+		Student student = mSharePrefrenceOpenHelper.findStudentByName("张三");
 		if (student != null) {
 			Logs.v("<<<<<<<<<<  学生信息 >>>>>>>>> ");
 			Logs.d("ID  姓名     年龄     成绩   ");

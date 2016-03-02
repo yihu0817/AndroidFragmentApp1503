@@ -36,21 +36,17 @@ public class SimpleAdapterActivity extends Activity implements OnItemClickListen
 		setContentView(R.layout.adapter_simple_adapter_layout);
 
 		mListView = (ListView) findViewById(R.id.simple_adapter_listview);
-		mExpandPopTabView = (ExpandPopTabView) findViewById(R.id.expand_pop_tabview);
-
 		ArrayList<HashMap<String, Object>> listData = new ArrayList<HashMap<String, Object>>();
-		setData(listData);
-		
+		setListData(listData);
 		String[] from = { "icon", "title", "content" };
 		int[] to = { R.id.simple_icon_img, R.id.simple_title_txt,R.id.simple_content_txt };
 		SimpleAdapter adapter = new SimpleAdapter(this, listData,
 				R.layout.adapter_simple_item1_layout, from, to);
-
 		mListView.setAdapter(adapter);
-		
 		mListView.setOnItemClickListener(this);
 
-		setData();
+		mExpandPopTabView = (ExpandPopTabView) findViewById(R.id.expand_pop_tabview);
+		setExpandPopData();
 
 		addItem(mExpandPopTabView, mPriceLists, "4000元/m^2", "价格");
 		addItem(mExpandPopTabView, mSortLists, "", "排序");
@@ -59,6 +55,7 @@ public class SimpleAdapterActivity extends Activity implements OnItemClickListen
 //		addItem(mExpandPopTabView, mParentLists,mChildrenListLists, "武侯区","红牌楼","区域");
 		addItem(mExpandPopTabView, mParentLists,mChildrenListLists, "","","区域");
 	}
+
 	public void addItem(ExpandPopTabView expandTabView, List<KeyValueBean> lists, String defaultSelect, String defaultShowText) {
 		PopOneListView popOneListView = new PopOneListView(this);
 		popOneListView.setDefaultSelectByValue(defaultSelect);
@@ -71,7 +68,6 @@ public class SimpleAdapterActivity extends Activity implements OnItemClickListen
 			}
 		});
 		expandTabView.addItemToExpandTab(defaultShowText, popOneListView);
-
 	}
 
 	public void addItem(ExpandPopTabView expandTabView, List<KeyValueBean> parentLists,
@@ -89,7 +85,7 @@ public class SimpleAdapterActivity extends Activity implements OnItemClickListen
 		expandTabView.addItemToExpandTab(defaultShowText, popTwoListView);
 	}
 
-	public void setData(){
+	public void setExpandPopData(){
 		mPriceLists = new ArrayList<>();
 		KeyValueBean keyValueBean = new KeyValueBean();
 		keyValueBean.setKey("1");
@@ -101,19 +97,16 @@ public class SimpleAdapterActivity extends Activity implements OnItemClickListen
 		keyValueBean.setValue("4000元/m^2");
 		mPriceLists.add(keyValueBean);
 
-
 		keyValueBean = new KeyValueBean();
 		keyValueBean.setKey("3");
 		keyValueBean.setValue("5050元/m^2");
 		mPriceLists.add(keyValueBean);
-
 
 		keyValueBean = new KeyValueBean();
 		keyValueBean.setKey("4");
 		keyValueBean.setValue("6000元/m^2");
 		mPriceLists.add(keyValueBean);
 //==============================================
-
 		mSortLists = new ArrayList<>();
 		keyValueBean = new KeyValueBean();
 		keyValueBean.setKey("1");
@@ -125,23 +118,19 @@ public class SimpleAdapterActivity extends Activity implements OnItemClickListen
 		keyValueBean.setValue("价格");
 		mSortLists.add(keyValueBean);
 
-
 		keyValueBean = new KeyValueBean();
 		keyValueBean.setKey("3");
 		keyValueBean.setValue("评价");
 		mSortLists.add(keyValueBean);
-
 
 		keyValueBean = new KeyValueBean();
 		keyValueBean.setKey("4");
 		keyValueBean.setValue("搜索");
 		mSortLists.add(keyValueBean);
 
-
-
 		mFavorLists = mPriceLists;
 
-		//===================
+		//=========二级区域==========
 		keyValueBean = new KeyValueBean();
 		keyValueBean.setKey("11");
 		keyValueBean.setValue("武侯区");
@@ -156,7 +145,6 @@ public class SimpleAdapterActivity extends Activity implements OnItemClickListen
 		keyValueBean.setKey("13");
 		keyValueBean.setValue("金牛区");
 		mParentLists.add(keyValueBean);
-
 
 		ArrayList whList = new ArrayList<KeyValueBean>();
 		keyValueBean = new KeyValueBean();
@@ -179,7 +167,6 @@ public class SimpleAdapterActivity extends Activity implements OnItemClickListen
 		keyValueBean.setValue("双楠");
 		whList.add(keyValueBean);
 
-
 		ArrayList qyList = new ArrayList<KeyValueBean>();
 		keyValueBean = new KeyValueBean();
 		keyValueBean.setKey("211");
@@ -201,18 +188,15 @@ public class SimpleAdapterActivity extends Activity implements OnItemClickListen
 		keyValueBean.setValue("天府广场");
 		qyList.add(keyValueBean);
 
-
 		ArrayList chList = new ArrayList<KeyValueBean>();
 		keyValueBean = new KeyValueBean();
 		keyValueBean.setKey("311");
 		keyValueBean.setValue("音乐公园");
 		chList.add(keyValueBean);
 
-
 		mChildrenListLists.add(whList);
 		mChildrenListLists.add(qyList);
 		mChildrenListLists.add(chList);
-
 	}
 
 	@Override
@@ -223,7 +207,7 @@ public class SimpleAdapterActivity extends Activity implements OnItemClickListen
 		}
 	}
 
-	public void setData(ArrayList<HashMap<String, Object>> listData){
+	public void setListData(ArrayList<HashMap<String, Object>> listData){
 		HashMap<String, Object> item = new HashMap<String, Object>();
 		item.put("icon", R.drawable.list1);
 		item.put("title", "1【多店通用】乡村基");

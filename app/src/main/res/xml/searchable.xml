@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android"
+    android:hint="请输入搜索内容"
+    android:includeInGlobalSearch="true"
+    android:label="搜索"
+    android:searchSuggestAuthority="com.scxh.android1503.ui.searchdialog.MySearchSuggestionProvider"
+    android:searchSuggestIntentAction="android.intent.action.SEARCH"
+    android:searchSuggestSelection="query LIKE ?">
+</searchable>

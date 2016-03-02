@@ -50,7 +50,7 @@ public class TitleBarView extends RelativeLayout implements View.OnClickListener
     public void init(Context context, AttributeSet attrs) {
         TypedArray a = null;
         try {
-            a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.TitleBarView, 0, 0);
+            a = getContext().obtainStyledAttributes(attrs, R.styleable.TitleBarView, 0, 0);
             mTitle = a.getString(R.styleable.TitleBarView_title_text);
             mLeft = a.getString(R.styleable.TitleBarView_left_text);
             mRight = a.getString(R.styleable.TitleBarView_right_text);

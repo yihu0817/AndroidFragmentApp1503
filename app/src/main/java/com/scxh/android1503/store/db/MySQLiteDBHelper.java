@@ -1,10 +1,10 @@
 package com.scxh.android1503.store.db;
 
-import com.scxh.android1503.util.Logs;
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.scxh.android1503.util.Logs;
 
 public class MySQLiteDBHelper extends SQLiteOpenHelper {
 	private static final String DB_NAME = "mydatabase.db";
@@ -27,10 +27,14 @@ public class MySQLiteDBHelper extends SQLiteOpenHelper {
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		Logs.v("onUpgrade >>>>>>>>>>>oldVersion  : "+oldVersion+ ", newVersion :"+newVersion);
-		
-		String sql = "alter table "+DataColumns.UserTable.TABLE_NAME+" add column number varchar(5)";
-		db.execSQL(sql);
+		Logs.v("onUpgrade >>>>>>>>>>>oldVersion  : " + oldVersion + ", newVersion :" + newVersion);
+		if(oldVersion == 2) {
+			String sql = "alter table " + DataColumns.UserTable.TABLE_NAME + " add column number varchar(5)";
+			db.execSQL(sql);
+		}
+		if(oldVersion == 3 ){
+
+		}
 	}
 
 }

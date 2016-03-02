@@ -13,6 +13,7 @@ import com.scxh.android1503.asynctask.GridViewAsyncTaskActivity;
 import com.scxh.android1503.asynctask.LoadPictureActivity;
 import com.scxh.android1503.event.EventActivity;
 import com.scxh.android1503.event.SaveStateActivity;
+import com.scxh.android1503.event.dispatch.DispatchActivity;
 import com.scxh.android1503.fragment.MainFragmentActivity;
 import com.scxh.android1503.fragment.life.LifeMainActivity;
 import com.scxh.android1503.fragment.parmeter.ArgmentsMainActivity;
@@ -59,12 +60,14 @@ import com.scxh.android1503.ui.menu.MenuOptionActivity;
 import com.scxh.android1503.ui.popwindow.PopWindowActivity;
 import com.scxh.android1503.ui.progressbar.ProgressBarActivity;
 import com.scxh.android1503.ui.scroll.ScroListViewOneActivity;
+import com.scxh.android1503.ui.searchdialog.SearchDialogActivity;
 import com.scxh.android1503.ui.shape.ShapeActivity;
 import com.scxh.android1503.ui.tab.MyRadioTabActivity;
 import com.scxh.android1503.ui.tab.MyTabActivity;
 import com.scxh.android1503.ui.webview.MyWebViewActivity;
 import com.scxh.android1503.ui.widget.ButtonActivity;
 import com.scxh.android1503.ui.widget.CheckBoxActivity;
+import com.scxh.android1503.ui.widget.EditActivity;
 import com.scxh.android1503.ui.widget.EditTextActivity;
 import com.scxh.android1503.ui.widget.ImageViewActvity;
 import com.scxh.android1503.ui.widget.LogingActivity;
@@ -123,7 +126,7 @@ public class MainActivity extends ListActivity {
 		addItem(data, "Activity参数传递 ", com.scxh.android1503.parameter.FirstActivity.class);
 		addItem(data, "Intent意图 ", ListIntentActivity.class);
 		addItem(data, "ArrayAdapter适配器", ArrayAdapterActivity.class);
-		addItem(data, "SimpleAdapter适配器", SimpleAdapterActivity.class);
+		addItem(data, "SimpleAdapter适配器+Expandtabview", SimpleAdapterActivity.class);
 		addItem(data, "MySimpleAdapterActivity适配器", MySimpleAdapterActivity.class);
 		addItem(data, "MyMessageAdapterActivity适配器", MyMessageAdapterActivity.class);
 		addItem(data, "Spinner", SpinnerActivity.class);
@@ -173,6 +176,9 @@ public class MainActivity extends ListActivity {
 		addItem(data, "SlideMenuMainActivity", SlideMenuMainActivity.class);
 		addItem(data, "网络字符缓存HttpCacheActivity", HttpCacheActivity.class);
 		addItem(data, "VolleyMainActivity", VolleyMainActivity.class);
+		addItem(data, "EditActivity", EditActivity.class);
+		addItem(data, "DispatchActivity事件分发机制", DispatchActivity.class);
+		addItem(data, "SearchDialogActivity", SearchDialogActivity.class);
 
 		return data;
 	}

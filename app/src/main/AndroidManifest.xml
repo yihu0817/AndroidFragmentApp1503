@@ -276,7 +276,14 @@
             android:name=".ui.searchdialog.MySearchSuggestionProvider"
             android:authorities="com.scxh.android1503.ui.searchdialog.MySearchSuggestionProvider" />
 
-        <activity android:name=".http.okhttp.OkHttpMainActivity"></activity>
+        <activity android:name=".http.okhttp.OkHttpMainActivity" />
+        <activity android:name=".store.provider.PacketActivity" />
+
+        <provider
+            android:name=".store.provider.TicketContentProvider"
+            android:authorities="com.scxh.android1503.ticketprovider"
+            android:enabled="true"
+            android:exported="true"></provider>
     </application>
 
 </manifest>

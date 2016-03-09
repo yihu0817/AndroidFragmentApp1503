@@ -10,6 +10,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.scxh.android1503.R;
+import com.scxh.android1503.fragment.tab.CircleFragment;
 import com.scxh.android1503.fragment.tab.TabOneFragment;
 import com.scxh.android1503.fragment.tab.TabThreeFragment;
 import com.scxh.android1503.fragment.tab.TabTwoFragment;
@@ -103,6 +104,7 @@ public class ViewPagerMainActivity extends SlidingActivity implements MenuFragme
 
 
     public void ininFragmentData(ArrayList<Fragment> data) {
+        data.add(CircleFragment.newInstance());
         data.add(TabOneFragment.newInstance());
         data.add(new TabTwoFragment());
         data.add(TabThreeFragment.newInstance());

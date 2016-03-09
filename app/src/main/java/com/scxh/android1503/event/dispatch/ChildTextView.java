@@ -7,9 +7,7 @@ import android.widget.TextView;
 
 import com.scxh.android1503.util.Logs;
 
-/**
- * Created by Administrator on 2016/2/25.
- */
+//ViewGroup View
 public class ChildTextView extends TextView {
 
     public ChildTextView(Context context, AttributeSet attrs) {
@@ -17,24 +15,20 @@ public class ChildTextView extends TextView {
     }
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Logs.d("ChildTextView   dispatchTouchEvent >>>>>>>" + super.dispatchTouchEvent(ev));
+        Logs.d("ChildTextView   dispatchTouchEvent >>>>>>>:" + ev.getAction());
         return super.dispatchTouchEvent(ev);
     }
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        switch (event.getAction()) {
-            case MotionEvent.ACTION_UP:
-                Logs.i("ChildTextView onTouchEvent 事件 ACTION_UP>>>>>>>> :"+super.onTouchEvent(event));
-                break;
-            case MotionEvent.ACTION_MOVE:
-                Logs.v("ChildTextView onTouchEvent 事件   ACTION_MOVE>>>>>>>> :"+super.onTouchEvent(event));
-                break;
-            case MotionEvent.ACTION_DOWN:
-                Logs.d("ChildTextView onTouchEvent 事件  ACTION_DOWN>>>>>>>> :"+super.onTouchEvent(event));
-                break;
-        }
 
-        return true;
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+        Logs.d("ChildTextView   onTouchEvent >>>>>>>:" + ev.getAction());
+        switch (ev.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                return super.onTouchEvent(ev);
+            case MotionEvent.ACTION_UP:
+                return true;
+        }
+        return true;//super.onTouchEvent(ev);
     }
 
 }

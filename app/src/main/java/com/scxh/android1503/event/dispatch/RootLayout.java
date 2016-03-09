@@ -15,30 +15,19 @@ public class RootLayout extends LinearLayout {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Logs.d("RootLayout   dispatchTouchEvent >>>>>>>"+super.dispatchTouchEvent(ev));
+        Logs.d("RootLayout   dispatchTouchEvent >>>>>>>:" + ev.getAction());
         return super.dispatchTouchEvent(ev);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Logs.d("RootLayout   onInterceptTouchEvent >>>>>>>" + super.onInterceptTouchEvent(ev));
+        Logs.d("RootLayout   onInterceptTouchEvent >>>>>>> :" + ev.getAction());
         return super.onInterceptTouchEvent(ev);
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-//        switch (event.getAction()) {
-//            case MotionEvent.ACTION_UP:
-//                Logs.i("RootLayout onTouchEvent 事件 ACTION_UP>>>>>>>>  :"+super.onTouchEvent(event));
-//                break;
-//            case MotionEvent.ACTION_MOVE:
-//                Logs.v("RootLayout onTouchEvent 事件   ACTION_MOVE>>>>>>>>  :"+super.onTouchEvent(event));
-//                break;
-//            case MotionEvent.ACTION_DOWN:
-//                Logs.d("RootLayout onTouchEvent 事件  ACTION_DOWN>>>>>>>>  :"+super.onTouchEvent(event));
-//                break;
-//        }
-
-        return super.onTouchEvent(event);
+    public boolean onTouchEvent(MotionEvent ev) {
+        Logs.d("RootLayout   onTouchEvent >>>>>>>:" + ev.getAction());
+        return super.onTouchEvent(ev);
     }
 }

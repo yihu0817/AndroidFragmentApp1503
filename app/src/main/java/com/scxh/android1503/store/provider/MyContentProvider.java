@@ -1,8 +1,5 @@
 package com.scxh.android1503.store.provider;
 
-import com.scxh.android1503.store.db.DataColumns;
-import com.scxh.android1503.util.Logs;
-
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;
@@ -10,6 +7,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
+
+import com.scxh.android1503.store.db.DataColumns;
+import com.scxh.android1503.util.Logs;
 
 /**
  * ContentProvider 内容提供者 四大组件之一 ContentReserver Uri :
@@ -68,6 +68,9 @@ public class MyContentProvider extends ContentProvider {
 	@Override
 	public Uri insert(Uri uri, ContentValues values) {
 		long id = db.insert(DataColumns.UserTable.TABLE_NAME, null, values);
+
+		getContext().getContentResolver().notifyChange(uri, null);
+
 		return Uri.withAppendedPath(CONTENT_URI, String.valueOf(id));
 	}
 
